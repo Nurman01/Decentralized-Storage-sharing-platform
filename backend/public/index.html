@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Storage Sharing Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.5.1/dist/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Decentralized Storage Sharing Platform</h1>
+
+        <div id="connect">
+            <button onclick="connectMetamask()">Connect Wallet</button>
+        </div>
+
+        <div id="provider-section">
+            <h2>Become a Storage Provider</h2>
+            <form id="provider-form">
+                <label for="storage-space">Enter Storage Space (GB):</label>
+                <input type="number" id="storage-space" required>
+                <button type="submit">Register as Provider</button>
+            </form>
+        </div>
+
+        <div id="consumer-section">
+            <h2>Find and Rent Storage</h2>
+            <button onclick="findProviders()">Find Storage Providers</button>
+            <div id="providers-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
